@@ -27,16 +27,16 @@ public class Car {
         this.mileageForReview = mileageForReview;
     }
 
-    public void DisplayCarDetails() {
+    public void displayCarDetails() {
         System.out.println("Brand" + brand);
         System.out.println("Mileage: " + mileage + " km");
     }
 
-    public int DistanceToBeAddedToMileage(int distance) {
+    public int distanceToBeAddedToMileage(int distance) {
         return mileage += distance;
     }
 
-    public int WhenInspectionIsNeeded() {
+    public int whenInspectionIsNeeded() {
         return mileageForReview - mileage;
     }
 }
