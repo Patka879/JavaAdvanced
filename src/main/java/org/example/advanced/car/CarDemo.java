@@ -1,0 +1,25 @@
+package org.example.advanced.car;
+
+public class CarDemo {
+
+    public static void main(String[] args) {
+
+
+    Car car1 = new Car("Volkswagen", 565283, 20000);
+    Car car2 = new Car("Mercedes", 93333, 40000);
+
+        System.out.println("Car 1:");
+        car1.DisplayCarDetails();
+
+        System.out.println("Car 2:");
+        car2.DisplayCarDetails();
+
+        car1.DistanceToBeAddedToMileage(2435);
+        System.out.println("Car 1 after driving for 2435km");
+        car1.DisplayCarDetails();
+
+        System.out.println("How many miles are left for inspection of Car 1?");
+        System.out.println("In " + car1.WhenInspectionIsNeeded());
+
+    }
+}
