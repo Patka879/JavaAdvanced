@@ -32,7 +32,7 @@ public class Parcel {
         this.isPrioritizes = isPrioritizes;
     }
 
-    public void parcelPrice() {
+    public double parcelPrice() {
         double price = 0;
 
         if (weight < 500) {
@@ -50,6 +50,7 @@ public class Parcel {
         }
 
         System.out.println("Parcel price is " + price + " PLN");
+        return price;
     }
 
     @Override
