@@ -33,13 +33,12 @@ public class LineFactory {
         return new Line(randomNumber, character);
     }
 
-    public static Line randomCharacterLineWithIncreasedLength(int numberOfLinesPrinted) {
-        int length = 2;
+    public static Line randomCharacterLineWithIncreasedLength(int length) {
         String characters = "!@#$%^&*(){}?><:|][';/.,";
         Random random = new Random();
         char character = characters.charAt(random.nextInt(characters.length()));
-
-        while (numberOfLinesPrinted)
-        return new Line(length, character);
+        Line line = new Line(length, character);
+        length *= 2;
+        return line;
     }
 }
