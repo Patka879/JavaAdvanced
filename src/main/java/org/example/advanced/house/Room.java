@@ -5,10 +5,10 @@ public class Room extends House {
     private Bed bed;
 
     public Room() {
-        this.bed = new Bed(5); // Create a Bed object with 5 days since last change
-        this.windows = new Window[2]; // Create an array of 2 windows
+        this.bed = new Bed(5);
+        this.windows = new Window[2];
         for (int i = 0; i < 2; i++) {
-            windows[i] = new Window(true); // Initialize each window object
+            windows[i] = new Window(true);
         }
     }
 }
