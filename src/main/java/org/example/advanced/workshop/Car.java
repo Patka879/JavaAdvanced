@@ -1,21 +1,23 @@
 package org.example.advanced.workshop;
 
+import org.example.advanced.house.Window;
+
 import java.util.Arrays;
 import java.util.Random;
 
 public class Car {
-    private Wheel[] wheel;
+    private Wheel[] wheels;
 
     public Car(Wheel[] wheel) {
-        this.wheel = wheel;
+        this.wheels = wheel;
     }
 
     public Wheel[] getWheel() {
-        return wheel;
+        return wheels;
     }
 
     public void setWheel(Wheel[] wheel) {
-        this.wheel = wheel;
+        this.wheels = wheel;
     }
 
     public void flatTire() {
@@ -23,14 +25,18 @@ public class Car {
         int numberOfFlatTires = random.nextInt(1, 4);
         for (int i = 0; i < numberOfFlatTires; i++) {
             int flatTireIndex = random.nextInt(1, 4);
-            wheel[flatTireIndex].setPierced(true);
-            wheel[flatTireIndex].setPressure(10);
+            wheels[flatTireIndex].setPierced(true);
+            wheels[flatTireIndex].setPressure(10);
         }
     }
 
     @Override
     public String toString() {
-        return "Car wheels: " +
-                "wheel=" + Arrays.toString(wheel);
+        StringBuilder wheelsDisplay = new StringBuilder("\n");
+        for (Wheel wheel : wheels) {
+            wheelsDisplay.append(wheel).append("\n");
+
+        }
+        return "Car wheels statistics: " + wheelsDisplay;
     }
 }
