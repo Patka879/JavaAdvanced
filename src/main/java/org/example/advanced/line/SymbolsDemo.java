@@ -6,6 +6,8 @@ public class SymbolsDemo {
         Line line = new Line(10, '*');
         Line line2 = new Line(5, '@');
         Line line3 = new Line(10, '&');
+        Line line4 = new Line('!'); // second constructor
+        Line line5 = new Line(40); // third constructor
 
         Rectangle rectangle1 = new Rectangle(10, 20, '%');
         Rectangle rectangle2 = new Rectangle(3,6, '$');
@@ -14,6 +16,8 @@ public class SymbolsDemo {
         line.printLine();
         line2.printLine();
         line3.printLine();
+        line4.printLine();
+        line5.printLine();
 
         rectangle1.printRectangle();
         rectangle2.printRectangle();

@@ -4,9 +4,19 @@ public class Line {
     private int length;
     private char filling;
 
-    public Line(int length, char symbol) {
+    public Line(int length, char filling) {
         this.length = length;
-        this.filling = symbol;
+        this.filling = filling;
+    }
+
+    // Manually generated
+    public Line(char filling) {
+        this.filling = filling;
+    }
+
+    // Automatically generated
+    public Line(int length) {
+        this.length = length;
     }
 
     public void printLine() {
