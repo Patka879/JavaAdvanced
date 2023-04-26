@@ -36,4 +36,11 @@ public class Car {
     public int whenInspectionIsNeeded() {
         return mileageForReview - mileage;
     }
+
+    @Override
+    public String toString() {
+        return "Car brand: " + brand +
+                " Mileage: " + mileage +
+                " MileageForReview" + mileageForReview;
+    }
 }

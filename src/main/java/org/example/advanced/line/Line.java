@@ -25,4 +25,8 @@ public class Line {
         }
         System.out.println();
     }
+
+    public String toString() {
+        return "Line length is " + length + " and symbol used to build the line is " + filling;
+    }
 }

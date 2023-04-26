@@ -22,6 +22,8 @@ public class SymbolsDemo {
         rectangle1.printRectangle();
         rectangle2.printRectangle();
         rectangle3.printRectangle();
+
+        System.out.println(line);
     }
 
 }

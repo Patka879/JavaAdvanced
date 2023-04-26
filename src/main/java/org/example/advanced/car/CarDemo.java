@@ -29,5 +29,7 @@ public class CarDemo {
 
         System.out.println("Car info with third constructor:");
         car4.displayCarDetails();
+
+        System.out.println(car1);
     }
 }
