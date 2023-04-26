@@ -21,14 +21,16 @@ public class Car {
     public void flatTire() {
         Random random = new Random();
         int flatTireIndex = random.nextInt(1, 4);
-        wheel[flatTireIndex].setPierced(true);
-        wheel[flatTireIndex].setPressure(10);
+        int numberOfFlatTires = random.nextInt(1, 4);
+        for (int i = 0; i < numberOfFlatTires; i++) {
+            wheel[flatTireIndex].setPierced(true);
+            wheel[flatTireIndex].setPressure(10);
+        }
     }
 
     @Override
     public String toString() {
-        return "Car{" +
-                "wheel=" + Arrays.toString(wheel) +
-                '}';
+        return "Car wheels: " +
+                "wheel=" + Arrays.toString(wheel);
     }
 }
