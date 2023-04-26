@@ -29,4 +29,12 @@ public class Wheel {
     public boolean isPierced() {
         return pierced;
     }
+
+    @Override
+    public String toString() {
+        return "Wheel{" +
+                "pressure=" + pressure +
+                ", pierced=" + pierced +
+                '}';
+    }
 }

@@ -1,5 +1,6 @@
 package org.example.advanced.workshop;
 
+import java.util.Arrays;
 import java.util.Random;
 
 public class Car {
@@ -22,5 +23,12 @@ public class Car {
         int flatTireIndex = random.nextInt(1, 4);
         wheel[flatTireIndex].setPierced(true);
         wheel[flatTireIndex].setPressure(10);
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "wheel=" + Arrays.toString(wheel) +
+                '}';
     }
 }

@@ -7,15 +7,13 @@ public class Workshop {
         this.car = car;
     }
 
-    public String repairCar() {
-        int fixedWheel = 0;
+    public void repairCar() {
         for (int i = 0; i < 4; i++) {
            if(car.getWheel()[i].getPressure() < 30 || car.getWheel()[i].isPierced() == true) {
                car.getWheel()[i].setPressure(30);
                car.getWheel()[i].setPierced(false);
-               fixedWheel = i;
+               System.out.println("Wheel " + (i + 1) + " has been repaired");
            }
         }
-        return "Wheel " + fixedWheel + " has been fixed";
     }
 }
