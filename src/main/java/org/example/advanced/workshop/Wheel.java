@@ -32,6 +32,6 @@ public class Wheel {
 
     @Override
     public String toString() {
-        return "Wheel pressure is " + pressure + " is " + (pierced ? "pierced" : "not pierced");
+        return "Wheel pressure is " + pressure + ", wheel is " + (pierced ? "pierced" : "not pierced");
     }
 }
