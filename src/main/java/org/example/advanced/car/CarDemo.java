@@ -9,17 +9,17 @@ public class CarDemo {
     Car car2 = new Car("Mercedes", 3332, 40000);
 
         System.out.println("Car 1:");
-        car1.DisplayCarDetails();
+        car1.displayCarDetails();
 
         System.out.println("Car 2:");
-        car2.DisplayCarDetails();
+        car2.displayCarDetails();
 
-        car1.DistanceToBeAddedToMileage(2435);
+        car1.distanceToBeAddedToMileage(2435);
         System.out.println("Car 1 after driving for 2435km");
-        car1.DisplayCarDetails();
+        car1.displayCarDetails();
 
         System.out.println("How many miles are left for inspection of Car 1?");
-        System.out.println("In " + car1.WhenInspectionIsNeeded());
+        System.out.println("In " + car1.whenInspectionIsNeeded());
 
     }
 }
