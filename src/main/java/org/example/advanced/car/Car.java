@@ -11,22 +11,6 @@ public class Car {
         this.mileageForReview = mileageForReview;
     }
 
-    public String getBrand() {
-        return brand;
-    }
-
-    public int getMileage() {
-        return mileage;
-    }
-
-    public int getMileageForReview() {
-        return mileageForReview;
-    }
-
-    public void setMileageForReview(int mileageForReview) {
-        this.mileageForReview = mileageForReview;
-    }
-
     public void displayCarDetails() {
         System.out.println("Brand" + brand);
         System.out.println("Mileage: " + mileage + " km");

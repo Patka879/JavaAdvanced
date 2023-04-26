@@ -1,6 +1,6 @@
 package org.example.advanced.line;
 
-public class LineDemo {
+public class SymbolsDemo {
 
     public static void main(String[] args) {
         Line line = new Line(10, '*');
