@@ -36,7 +36,6 @@ public class Car {
         StringBuilder wheelsDisplay = new StringBuilder("\n");
         for (Wheel wheel : wheels) {
             wheelsDisplay.append(wheel).append("\n");
-
         }
         return "Car wheels statistics: " + wheelsDisplay;
     }

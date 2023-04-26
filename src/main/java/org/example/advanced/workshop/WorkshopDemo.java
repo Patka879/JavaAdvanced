@@ -12,8 +12,12 @@ public class WorkshopDemo {
         Workshop workshop = new Workshop(car1);
 
         System.out.println(car1); // car with all wheels working
+        System.out.println("=============");
         car1.flatTire();          // giving a flat tire to random wheel or more than one
+        System.out.println(car1); // printing the effect of flatTire method
+        System.out.println("=============");
         workshop.repairCar();     // repairing wheels
+        System.out.println("=============");
         System.out.println(car1); // checking if all wheels are now fixed
     }
 }
