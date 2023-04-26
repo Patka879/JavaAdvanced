@@ -19,6 +19,25 @@ public class Line {
         this.length = length;
     }
 
+    // Manually written getters and setters
+
+
+    public int getLength() {
+        return length;
+    }
+
+    public char getFilling() {
+        return filling;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public void setFilling(char filling) {
+        this.filling = filling;
+    }
+
     public void printLine() {
         for (int i = 0; i < length; i++) {
             System.out.print(filling);

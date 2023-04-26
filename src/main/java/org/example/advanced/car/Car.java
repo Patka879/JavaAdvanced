@@ -29,6 +29,33 @@ public class Car {
         System.out.println("Mileage: " + mileage + " km");
     }
 
+    // Automatically generated getters and setters
+
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public int getMileage() {
+        return mileage;
+    }
+
+    public int getMileageForReview() {
+        return mileageForReview;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public void setMileage(int mileage) {
+        this.mileage = mileage;
+    }
+
+    public void setMileageForReview(int mileageForReview) {
+        this.mileageForReview = mileageForReview;
+    }
+
     public int distanceToBeAddedToMileage(int distance) {
         return mileage += distance;
     }
