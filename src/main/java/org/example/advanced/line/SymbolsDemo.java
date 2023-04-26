@@ -11,9 +11,9 @@ public class SymbolsDemo {
         Rectangle rectangle2 = new Rectangle(3,6, '$');
         Rectangle rectangle3 = new Rectangle(5,6, '#');
 
-//        line.printLine();
-//        line2.printLine();
-//        line3.printLine();
+        line.printLine();
+        line2.printLine();
+        line3.printLine();
 
         rectangle1.printRectangle();
         rectangle2.printRectangle();

@@ -24,21 +24,16 @@ public class Rectangle {
     }
 
     public void printRectangle() {
-        for (int i = 0; i < height; i++) {
-            if (i == 0 || i == height - 1) {
-                for (int j = 0; j < width; j++) {
+        for (int i = 0; i < height; i++)
+        {
+            System.out.println();
+            for (int j = 0; j < width; j++)
+            {
+                if (i == 0 || i == height-1 ||
+                        j== 0 || j == width-1)
                     System.out.print(filling);
-                }
-                System.out.println("");
-            } else {
-                for (int j = 0; j < width; j++) {
-                    if (j == 0 || j == width - 1) {
-                        System.out.print(filling);
-                    } else {
-                        System.out.print(" ");
-                    }
-                    System.out.println("");
-                }
+                else
+                    System.out.print(" ");
             }
         }
     }
