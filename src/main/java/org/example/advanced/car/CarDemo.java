@@ -5,8 +5,8 @@ public class CarDemo {
     public static void main(String[] args) {
 
 
-    Car car1 = new Car("Volkswagen", 565283, 20000);
-    Car car2 = new Car("Mercedes", 93333, 40000);
+    Car car1 = new Car("Volkswagen", 283, 20000);
+    Car car2 = new Car("Mercedes", 3332, 40000);
 
         System.out.println("Car 1:");
         car1.DisplayCarDetails();
