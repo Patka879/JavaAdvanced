@@ -27,6 +27,7 @@ public class Car {
             int flatTireIndex = random.nextInt(1, 4);
             wheels[flatTireIndex].setPierced(true);
             wheels[flatTireIndex].setPressure(10);
+            System.out.println("Wheel " + (i + 1) +" is flat");
         }
     }
 
