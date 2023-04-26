@@ -20,6 +20,6 @@ public class Window {
 
     @Override
     public String toString() {
-        return  "\n" + "This window is " + (canOpen ? "opened" : "closed");
+        return  "This window is " + (canOpen ? "opened" : "closed");
     }
 }

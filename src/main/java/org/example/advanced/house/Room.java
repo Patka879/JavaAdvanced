@@ -20,6 +20,11 @@ public class Room{
 
     @Override
     public String toString() {
-        return "Room details: " + "\n" + "Windows:" + Arrays.toString(windows) + "\n" + "Beds: " + "\n" + bed;
+        StringBuilder windowsDisplay = new StringBuilder("\n");
+        for (Window window : windows) {
+            windowsDisplay.append(window).append("\n");
+
+        }
+        return "Room details: \n Windows:" + windowsDisplay + "\n" + "Beds: " + "\n" + bed;
     }
 }
