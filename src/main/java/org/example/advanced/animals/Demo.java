@@ -1,6 +1,9 @@
 package org.example.advanced.animals;
 
-import java.sql.SQLOutput;
+import org.example.advanced.animals.animals.Animal;
+import org.example.advanced.animals.animals.Cat;
+import org.example.advanced.animals.animals.Dog;
+import org.example.advanced.animals.animals.GuineaPig;
 
 public class Demo {
     public static void main(String[] args) {
@@ -49,14 +52,22 @@ public class Demo {
         animal.makeSound();
         System.out.println("============");
         animalKeeper.feed(guineaPig);
-
-        Animal[] animals = new Animal[]{dog, dog2, cat, cat2, guineaPig, guineaPig2};
-
-
+        Mouse mouse = new Mouse();
+        Animal[] animals = {dog, dog2, cat, cat2, guineaPig, guineaPig2, animal, mouse};
         System.out.println("=====ITERATING=====");
         for (Animal oneAnimal : animals) {
             oneAnimal.makeSound();
             oneAnimal.eatSomething();
         }
+        System.out.println("======================================");
+        System.out.println("Animal Keeper loop");
+        animalKeeper.feed(dog, dog2, cat, cat2, mouse);
+        System.out.println(animals.length);
     }
 }
+
+// what is abstract method
+// what is polymofpysm
+// how constructor works in inheritance
+// what are acces types
+// what protected type does

@@ -1,11 +1,9 @@
-package org.example.advanced.animals;
+package org.example.advanced.animals.animals;
 
 import java.util.Arrays;
 
-public class Dog extends Animal{
+public class Dog extends Animal {
 
-    private String name;
-    private int age;
     private String[] tricks;
     private int lastTrickIndex = 0;
 

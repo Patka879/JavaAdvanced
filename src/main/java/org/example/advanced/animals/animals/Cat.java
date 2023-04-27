@@ -1,4 +1,6 @@
-package org.example.advanced.animals;
+package org.example.advanced.animals.animals;
+
+import org.example.advanced.animals.animals.Animal;
 
 public class Cat extends Animal {
 

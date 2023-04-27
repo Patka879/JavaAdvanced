@@ -1,8 +1,8 @@
-package org.example.advanced.animals;
+package org.example.advanced.animals.animals;
 
-public class GuineaPig extends Animal{
-    private String name;
-    private int age;
+import org.example.advanced.animals.animals.Animal;
+
+public class GuineaPig extends Animal {
     private String type;
 
     public GuineaPig(String name, int age, String type) {
