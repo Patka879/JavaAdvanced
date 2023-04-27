@@ -13,7 +13,7 @@ public class Parcel {
         this.recipient = recipient;
         this.weight = weight;
         this.status = Status.CREATED;
-        errorHandling();
+        validateData();
     }
 
     public Parcel(String sender, String recipient, int weight, boolean isPrioritizes) {;
@@ -22,7 +22,7 @@ public class Parcel {
         this.weight = weight;
         this.isPrioritized = isPrioritizes;
         this.status = Status.CREATED;
-        errorHandling();
+        validateData();
     }
 
     public void setStatus(Status status) {
@@ -50,7 +50,7 @@ public class Parcel {
         return price;
     }
 
-    private void errorHandling() {
+    private void validateData() {
         if(sender == null || sender.isEmpty()) {
             System.out.println("Error: Sender is not specified");
         }
