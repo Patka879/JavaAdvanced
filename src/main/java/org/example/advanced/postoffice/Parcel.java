@@ -1,35 +1,32 @@
 package org.example.advanced.postoffice;
 
-import java.sql.SQLOutput;
-
 public class Parcel {
     private String sender;
     private String recipient;
     private int weight;
-    private boolean isPrioritizes;
+    private boolean isPrioritized;
+
+    private Status status;
 
     public Parcel(String sender, String recipient, int weight) {
-        if(sender == null || sender.isEmpty()) {
-            System.out.println("Error: Sender is not specified");
-        }
-        if(recipient == null || recipient.isEmpty()) {
-            System.out.println("Error: Recipient is not specified");
-        }
-        if(weight < 1)  {
-            System.out.println("Error: Package is too light");
-        } else if (weight > 10000) {
-            System.out.println("Error: Package is too heavy");
-        }
         this.sender = sender;
         this.recipient = recipient;
         this.weight = weight;
+        this.status = Status.CREATED;
+        errorHandling();
     }
 
-    public Parcel(String sender, String recipient, int weight, boolean isPrioritizes) {
+    public Parcel(String sender, String recipient, int weight, boolean isPrioritizes) {;
         this.sender = sender;
         this.recipient = recipient;
         this.weight = weight;
-        this.isPrioritizes = isPrioritizes;
+        this.isPrioritized = isPrioritizes;
+        this.status = Status.CREATED;
+        errorHandling();
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
     public double parcelPrice() {
@@ -45,12 +42,26 @@ public class Parcel {
             price = 12 + (weight -  2000) * 0.01;
         }
 
-        if (isPrioritizes) {
+        if (isPrioritized) {
             price += 0.1 * price;
         }
 
         System.out.println("Parcel price is " + price + " PLN");
         return price;
+    }
+
+    private void errorHandling() {
+        if(sender == null || sender.isEmpty()) {
+            System.out.println("Error: Sender is not specified");
+        }
+        if(recipient == null || recipient.isEmpty()) {
+            System.out.println("Error: Recipient is not specified");
+        }
+        if(weight < 1)  {
+            System.out.println("Error: Package is too light");
+        } else if (weight > 10000) {
+            System.out.println("Error: Package is too heavy");
+        }
     }
 
     @Override
@@ -59,6 +70,6 @@ public class Parcel {
                 "Sender: " + sender + "\n" +
                 "Recipient: " + recipient + "\n" +
                 "Weight: " + weight + "grams" + "\n" +
-                "Priority: " + (isPrioritizes ? "Yes" : "No");
+                "Priority: " + (isPrioritized ? "Yes" : "No");
     }
 }
