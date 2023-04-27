@@ -15,6 +15,12 @@ public class GameDemo {
             System.out.println(rank + " power is " + rank.getPower());
         }
 
+        for(Rank rank : Rank.values()) {
+            for(Suit suit : Suit.values()) {
+                Card card = new Card(rank, suit);
+                System.out.println(card);
+            }
+        }
 
     }
 
