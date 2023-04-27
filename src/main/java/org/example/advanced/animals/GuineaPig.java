@@ -31,10 +31,8 @@ public class GuineaPig extends Animal{
 
     @Override
     public String toString() {
-        return "GuineaPig{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", type='" + type + '\'' +
-                '}';
+        return "GuineaPig: Name: " + name +
+                " Age: " + age +
+                " Type: " + type;
     }
 }

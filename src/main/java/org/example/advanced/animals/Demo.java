@@ -52,6 +52,7 @@ public class Demo {
         guineaPig.eatSomething();
         animal = new GuineaPig();
         animal.makeSound();
+        System.out.println("============");
         animalKeeper.feed(guineaPig);
     }
 }
