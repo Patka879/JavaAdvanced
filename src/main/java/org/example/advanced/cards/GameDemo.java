@@ -25,13 +25,8 @@ public class GameDemo {
 
         System.out.println();
         System.out.println("THIS IS A FULL DECK");
-        List<Card> deck = new ArrayList<>();
-        for(Rank rank : Rank.values()) {
-            for(Suit suit : Suit.values()) {
-                deck.add(new Card(rank, suit));
-            }
-        }
-        System.out.println(deck);
+        Deck deck = new Deck();
+        deck.fullDeck();
 
         System.out.println();
         System.out.println("ALL SPADE CARDS");
@@ -40,6 +35,12 @@ public class GameDemo {
             allSpades.add(new Card(rank, Suit.SPADES));
         }
         System.out.println(allSpades);
+
+
+        /**
+         * WAR GAME
+         */
+
 
     }
 
