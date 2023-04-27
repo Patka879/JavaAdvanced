@@ -6,9 +6,12 @@ import org.example.advanced.citizens.classes.Citizen;
 import java.util.ArrayList;
 
 public class Town {
+    ArrayList<Citizen> citizens = new ArrayList<>();
+    void addCitizen(Citizen citizen) {
+        citizens.add(citizen);
+    }
 
-
-    public int howManyCanVote(Citizen... citizens) {
+    public int howManyCanVote() {
         int votersCount = 0;
         for (Citizen citizen : citizens) {
             if (citizen.canVote()) {
@@ -19,7 +22,7 @@ public class Town {
         return votersCount;
     }
 
-    public void whoCanVote(Citizen... citizens) {
+    public void whoCanVote() {
         for (Citizen citizen : citizens) {
             if (citizen.canVote()) {
                 System.out.println(citizen);

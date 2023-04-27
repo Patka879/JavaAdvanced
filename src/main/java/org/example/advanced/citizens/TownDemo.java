@@ -1,9 +1,8 @@
 package org.example.advanced.citizens;
 
-import org.example.advanced.citizens.classes.King;
-import org.example.advanced.citizens.classes.Peasant;
-import org.example.advanced.citizens.classes.Soldier;
-import org.example.advanced.citizens.classes.Townsman;
+import org.example.advanced.citizens.classes.*;
+
+import java.lang.reflect.Array;
 
 public class TownDemo {
     public static void main(String[] args) {
@@ -21,11 +20,16 @@ public class TownDemo {
         Soldier soldier2 = new Soldier("Mieszko");
         Soldier soldier3 = new Soldier("Kamil");
 
+        Citizen[] citizens = {king, soldier1, soldier2, soldier3, townsman1, townsman2, townsman3, peasant1, peasant2, peasant3};
         Town town = new Town();
-        town.howManyCanVote(king, soldier1, soldier2, soldier3, townsman1, townsman2, townsman3, peasant1, peasant2, peasant3);
+        for(Citizen citizen : citizens) {
+            town.addCitizen(citizen);
+        }
+
+        town.howManyCanVote();
 
         System.out.println("===========");
         System.out.println("WHO CAN VOTE?");
-        town.whoCanVote(king, soldier1, soldier2, soldier3, townsman1, townsman2, townsman3, peasant1, peasant2, peasant3);
+        town.whoCanVote();
     }
 }
