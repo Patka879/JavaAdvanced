@@ -11,10 +11,11 @@ public class GameDemo {
         System.out.println("Card 1: " + card1);
         System.out.println("Card 2: " + card2);
 
-
-        //Higher card
+        System.out.println();
+        System.out.println("Higher card");
         CompareCards compareCards = new CompareCards();
         compareCards.whichCardWins(card1, card2);
+        compareCards.printWhoWins(card1, card2);
 
         System.out.println();
         System.out.println("ALL RANK POWERS");
