@@ -23,10 +23,10 @@ public class GameDemo {
             System.out.println(rank + " power is " + rank.getPower());
         }
 
-        System.out.println();
-        System.out.println("THIS IS A FULL DECK");
-        Deck deck = new Deck();
-        deck.fullDeck();
+//        System.out.println();
+//        System.out.println("THIS IS A FULL DECK");
+//        Deck deck = new Deck();
+//        deck.fullDeck();
 
         System.out.println();
         System.out.println("ALL SPADE CARDS");
@@ -34,7 +34,6 @@ public class GameDemo {
         for(Rank rank : Rank.values()) {
             allSpades.add(new Card(rank, Suit.SPADES));
         }
-        System.out.println(allSpades);
 
 
         /**
