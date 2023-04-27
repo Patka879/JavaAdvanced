@@ -52,12 +52,10 @@ public class Dog extends Animal{
 
     @Override
     public String toString() {
-        return "Dog{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                ", tricks=" + Arrays.toString(tricks) +
-                ", lastTrickIndex=" + lastTrickIndex +
-                '}';
+        return "DOG: Name" + name +
+                " Age: " + age +
+                " Tricks: " + Arrays.toString(tricks) +
+                " Last trick index: " + lastTrickIndex;
     }
 
     public void eatSomething() {
