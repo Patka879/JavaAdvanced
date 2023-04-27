@@ -2,8 +2,6 @@ package org.example.advanced.citizens;
 
 import org.example.advanced.citizens.classes.*;
 
-import java.lang.reflect.Array;
-
 public class TownDemo {
     public static void main(String[] args) {
         King king = new King("Karol");
