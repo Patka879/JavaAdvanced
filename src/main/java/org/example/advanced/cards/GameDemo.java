@@ -22,6 +22,14 @@ public class GameDemo {
             }
         }
 
+        System.out.println("===========");
+        System.out.println("SPADE CARDS");
+        //Spade cards
+        for(Rank rank : Rank.values()) {
+            Card card = new Card(rank, Suit.SPADES);
+            System.out.println(card);
+        }
+
     }
 
 
