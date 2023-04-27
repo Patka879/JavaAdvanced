@@ -29,16 +29,11 @@ public class Demo {
         cat.eatSomething();
         System.out.println("---------");
         AnimalKeeper animalKeeper = new AnimalKeeper();
-//        animalKeeper.feedDog(dog);
-//        animalKeeper.feedCat(cat);
+
         animalKeeper.feed(cat);
         animalKeeper.feed(dog);
 
         System.out.println("---------");
-//        Animal animal = new Dog();
-//        Cat cat1 = (Cat) animal;
-//        cat1.meow();
-
         System.out.println("----------");
         //polymorphism example
         Animal animal = new Dog();
@@ -54,5 +49,14 @@ public class Demo {
         animal.makeSound();
         System.out.println("============");
         animalKeeper.feed(guineaPig);
+
+        Animal[] animals = new Animal[]{dog, dog2, cat, cat2, guineaPig, guineaPig2};
+
+
+        System.out.println("=====ITERATING=====");
+        for (Animal oneAnimal : animals) {
+            oneAnimal.makeSound();
+            oneAnimal.eatSomething();
+        }
     }
 }
