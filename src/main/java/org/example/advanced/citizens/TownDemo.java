@@ -23,6 +23,9 @@ public class TownDemo {
 
         Town town = new Town();
         town.howManyCanVote(king, soldier1, soldier2, soldier3, townsman1, townsman2, townsman3, peasant1, peasant2, peasant3);
+
+        System.out.println("===========");
+        System.out.println("WHO CAN VOTE?");
         town.whoCanVote(king, soldier1, soldier2, soldier3, townsman1, townsman2, townsman3, peasant1, peasant2, peasant3);
     }
 }

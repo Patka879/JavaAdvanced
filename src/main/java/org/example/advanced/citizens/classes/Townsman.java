@@ -13,8 +13,6 @@ public class Townsman extends Citizen {
 
     @Override
     public String toString() {
-        return "Townsman{" +
-                "name='" + name + '\'' +
-                '}';
+        return "Townsman " + name;
     }
 }

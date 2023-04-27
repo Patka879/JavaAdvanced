@@ -12,6 +12,6 @@ public class Soldier extends Citizen{
 
     @Override
     public String toString() {
-        return "Soldier{}" + name;
+        return "Soldier " + name;
     }
 }
