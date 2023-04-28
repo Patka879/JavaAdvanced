@@ -8,6 +8,7 @@ public class BookshelfDemo {
         Bookshelf bookshelf = new Bookshelf();
         try {
             bookshelf.loadBooks();
+            System.out.println(bookshelf.getBooks());
         } catch (FileNotFoundException e) {
             System.out.println("No book list found. You should start reading!");
         }
