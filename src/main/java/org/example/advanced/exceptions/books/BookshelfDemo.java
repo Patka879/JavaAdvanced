@@ -4,6 +4,7 @@ import java.io.FileNotFoundException;
 
 public class BookshelfDemo {
     public static void main(String[] args) {
+        System.out.println("Books about programming:");
         Bookshelf bookshelf = new Bookshelf();
         try {
             bookshelf.loadBooks();

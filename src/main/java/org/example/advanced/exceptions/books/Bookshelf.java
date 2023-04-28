@@ -17,8 +17,13 @@ public class Bookshelf {
         File file = new File(FILE_PATH);
         Scanner scanner = new Scanner(file);
         while (scanner.hasNextLine()) {
-            String book = scanner.nextLine();
+            Book book = new Book(scanner.nextLine());
+            books.add(book);
             System.out.println("- " + book);
         }
+    }
+
+    public List<Book> getBooks() {
+        return books;
     }
 }
