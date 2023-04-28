@@ -1,8 +1,10 @@
 package org.example.advanced.animals.animals;
 
+import org.example.advanced.animals.Pet;
+import org.example.advanced.animals.WildAnimal;
 import org.example.advanced.animals.animals.Animal;
 
-public class Cat extends Animal {
+public class Cat extends Animal implements Pet, WildAnimal {
 
     private String name;
     private int age;
@@ -42,5 +44,14 @@ public class Cat extends Animal {
         System.out.println("this animal is cat and it's eating mice");
     }
 
+    @Override
+    public void pet() {
+        System.out.println("Cat is not happy to be petted.");
+    }
 
+
+    @Override
+    public void attack() {
+        System.out.println("Cat scratched You");
+    }
 }

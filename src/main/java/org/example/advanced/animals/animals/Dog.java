@@ -1,8 +1,10 @@
 package org.example.advanced.animals.animals;
 
+import org.example.advanced.animals.Pet;
+
 import java.util.Arrays;
 
-public class Dog extends Animal {
+public class Dog extends Animal implements Pet {
 
     private String[] tricks;
     private int lastTrickIndex = 0;
@@ -59,4 +61,10 @@ public class Dog extends Animal {
     public void eatSomething() {
         System.out.println("Dog is eating doggie stuff");
     }
+
+    @Override
+    public void pet() {
+        System.out.println("Pet a Dog");
+    }
+
 }

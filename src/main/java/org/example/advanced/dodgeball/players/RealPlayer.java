@@ -5,13 +5,13 @@ import java.util.Scanner;
 public class RealPlayer extends Player {
 
     private boolean isAlive;
-    public RealPlayer(String name, int verticalPosition, int horizontalPosition) {
-        super( name, verticalPosition, horizontalPosition);
+    public RealPlayer(String name) {
+        super( name);
         isAlive = true;
     }
 
     @Override
-    public String makeMove() {
+    public void makeMove() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter direction (W/A/S/D): ");
         char direction = scanner.next().charAt(0);
@@ -31,7 +31,8 @@ public class RealPlayer extends Player {
                 newVerticalPosition++;
                 break;
         }
-        return newVerticalPosition + "," + newHorizontalPosition;
+        horizontalPosition = newHorizontalPosition;
+        newVerticalPosition = newVerticalPosition;
     }
 
     @Override

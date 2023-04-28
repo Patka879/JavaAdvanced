@@ -5,13 +5,13 @@ import java.util.Random;
 public class ComputerPlayer extends Player {
 
     private boolean isAlive;
-    public ComputerPlayer(String name, int verticalPosition, int horizontalPosition) {
-        super(name, horizontalPosition, verticalPosition);
+    public ComputerPlayer(String name) {
+        super(name);
         isAlive = true;
     }
 
     @Override
-    public String makeMove() {
+    public void makeMove() {
         Random random = new Random();
         int direction = random.nextInt(4);
         int newHorizontalPosition = horizontalPosition;
@@ -30,7 +30,8 @@ public class ComputerPlayer extends Player {
                 newVerticalPosition++;
                 break;
         }
-        return newVerticalPosition + "," + newHorizontalPosition;
+        horizontalPosition = newHorizontalPosition;
+        newVerticalPosition = newVerticalPosition;
     }
 
     @Override

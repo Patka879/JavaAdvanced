@@ -1,8 +1,9 @@
 package org.example.advanced.animals.animals;
 
+import org.example.advanced.animals.WildAnimal;
 import org.example.advanced.animals.animals.Animal;
 
-public class GuineaPig extends Animal {
+public class GuineaPig extends Animal implements WildAnimal {
     private String type;
 
     public GuineaPig(String name, int age, String type) {
@@ -34,5 +35,10 @@ public class GuineaPig extends Animal {
         return "GUINEA PIG: Name: " + name +
                 " Age: " + age +
                 " Type: " + type;
+    }
+
+    @Override
+    public void attack() {
+        System.out.println("Guinea Pig attacked You");
     }
 }
