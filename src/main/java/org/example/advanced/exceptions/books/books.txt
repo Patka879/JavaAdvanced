@@ -1,0 +1,4 @@
+Books about programming:
+Clean Code
+How to write Adventure Modules that don't suck
+Cracking the coding interview
