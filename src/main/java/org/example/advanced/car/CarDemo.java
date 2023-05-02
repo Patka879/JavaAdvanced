@@ -4,13 +4,22 @@ public class CarDemo {
 
     public static void main(String[] args) {
 
+        Car car1 = new Car("Volkswagen", 283, 20000);
+        Car car2 = new Car("Mercedes", 3332, 40000);
+        Car car3 = new Car("BMW", 23333); // second constructor
+        Car car4 = new Car("Toyota"); // third constructor
 
-    Car car1 = new Car("Volkswagen", 283, 20000);
-    Car car2 = new Car("Mercedes", 3332, 40000);
-    Car car3 = new Car("BMW", 23333); // second constructor
-    Car car4 = new Car("Toyota"); // third constructor
 
+        System.out.println("=======Car info displayed in an array========");
+        Car[] cars = {car1, car2, car3, car4};
 
+        for (Car car : cars) {
+            System.out.println();
+            car.displayCarDetails();
+        }
+
+        System.out.println();
+        System.out.println("=======Car info displayed without usign an array========");
         System.out.println("Car 1:");
         car1.displayCarDetails();
 
