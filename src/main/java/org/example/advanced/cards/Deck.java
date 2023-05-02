@@ -54,12 +54,24 @@ public class Deck {
             "Round won by player2");
             player1Deck.remove(0);
         } else {
-            System.out.println("Both cards are equal. It's a tie");
-            Random random = new Random();
-            player1Deck.add(random.nextInt(player1Deck.size()) ,player1Deck.get(0));
-            player2Deck.add(random.nextInt(player2Deck.size()),player2Deck.get(0));
-            player1Deck.remove(0);
-            player2Deck.remove(0);
+            System.out.println("Both cards are equal. It's time for war between next cards");
+            System.out.println("Player1: " + player1Deck.get(1));
+            System.out.println("Player2: " + player2Deck.get(1));
+            if (player1Deck.get(1).getRank().getPower() > player2Deck.get(1).getRank().getPower()) {
+                System.out.println(player1Deck.get(1) + " is higher than " + player2Deck.get(1) + "\n" +
+                        "Round won by player1. Player 2 is loosing two cards");
+                player2Deck.remove(0);
+                player2Deck.remove(1);
+            }   else if (player1Deck.get(1).getRank().getPower() < player2Deck.get(1).getRank().getPower()) {
+                System.out.println(player1Deck.get(1) + " is lower than " + player2Deck.get(1) + "\n" +
+                        "Round won by player2. Player 1 is loosing two cards");
+                player1Deck.remove(0);
+                player1Deck.remove(1);
+            }   else {
+                System.out.println("Too many equal Cards. Time to shuffle decks");
+                Collections.shuffle(player1Deck);
+                Collections.shuffle(player2Deck);
+            }
         }
         System.out.println();
         System.out.println("DECKS AFTER THIS ROUND:");
@@ -93,6 +105,12 @@ public class Deck {
             if (deck.player1Deck.isEmpty() || deck.player2Deck.isEmpty()) {
                 break;
             }
+        }
+        System.out.println();
+        if (deck.player1Deck.isEmpty()) {
+            System.out.println("----------------------THE WINNER IS PLAYER 2!------------------");
+        } else {
+            System.out.println("----------------------THE WINNER IS PLAYER 1!------------------");
         }
     }
 }
