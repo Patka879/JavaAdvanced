@@ -47,6 +47,6 @@ public class Post {
         Parcel parcel = new Parcel(sender, recipient, weight, isPrioritized);
         sendPackage(parcel);
         System.out.println(parcel);
-
+        System.out.println("Parcel returned");
     }
 }
