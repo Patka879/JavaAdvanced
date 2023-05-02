@@ -1,3 +1,16 @@
+/**
+ * Prepare a program in which you will simulate a situation when a car driver catches a flat tire and takes it
+ * to the workshop for repair.
+ * - In main prepare four Wheel objects, pressure of each of them must be set to default value, and they are
+ *   not pierced,
+ * - Collect all the wheels into an array and pass it to the Car object,
+ * - Simulate the event that the car gets a flat tire in a random wheel,
+ * - A Workshop object can accept a car for repair,
+ * - The repair is that the workshop finds which wheel from the car is broken and fixes it,
+ * - At the end of the repair, the workshop returns an object of the Receipt type containing the type of service,
+ *   how many times it was performed and the total price.
+ */
+
 package org.example.advanced.workshop;
 
 public class Workshop {

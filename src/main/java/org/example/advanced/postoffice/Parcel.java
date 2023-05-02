@@ -46,9 +46,11 @@ public class Parcel {
             price += 0.1 * price;
         }
 
-        System.out.println("Parcel price is " + price + " PLN");
+        String formattedPrice = String.format("%.2f", price);
+        System.out.println("Parcel price is " + formattedPrice + " PLN");
         return price;
     }
+
 
     private void validateData() {
         if(sender == null || sender.isEmpty()) {

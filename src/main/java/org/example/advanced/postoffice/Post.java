@@ -12,27 +12,32 @@ public class Post {
         this.takings = 0;
     }
 
-    public void sendPackage(Parcel parcel, double moneyPaid) {
+    public void sendPackage(Parcel parcel) {
+        Scanner scanner = new Scanner(System.in);
         double price = parcel.parcelPrice();
+        System.out.println("Please enter amount paid by You: ");
+        Double moneyPaid = scanner.nextDouble();
+        System.out.println();
         double moneyToReturn = 0;
         if (moneyPaid >= price) {
             parcel.setStatus(Status.SHIPPED);
-            moneyToReturn = price - moneyPaid;
+            moneyToReturn = moneyPaid - price;
+            System.out.println("Your package has been sent");
         } else {
             moneyToReturn = moneyPaid;
+            parcel.setStatus(Status.REJECTED);
+            System.out.println("Not enough money, You can't send this package.");
         }
         takings = moneyPaid - moneyToReturn;
-        System.out.println("Money returned to customer: " + moneyToReturn);
+        String formattedPrice = String.format("%.2f", moneyToReturn);
+        System.out.println("Money returned to customer: " + formattedPrice);
     }
 
-    public String createAndReturn() {
+    public void createAndReturn() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Please pay for the package (##.##)");
-        double moneyPaid = scanner.nextDouble();
-        System.out.println("Add below information:");
-        System.out.println("Sender name:");
+        System.out.println("Enter sender name:");
         String sender = scanner.nextLine();
-        System.out.println("Recipient name:");
+        System.out.println("Enter recipient name:");
         String recipient = scanner.nextLine();
         System.out.println("Parcel weight (grams):");
         int weight = scanner.nextInt();
@@ -40,12 +45,8 @@ public class Post {
         boolean isPrioritized = scanner.nextBoolean();
 
         Parcel parcel = new Parcel(sender, recipient, weight, isPrioritized);
-        sendPackage(parcel, moneyPaid);
-
-        return "Parcel details: " + "\n" +
-                parcel +
-                "Parcel price:" + "\n" +
-                parcel.parcelPrice() + "\n";
+        sendPackage(parcel);
+        System.out.println(parcel);
 
     }
 }

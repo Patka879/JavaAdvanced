@@ -34,5 +34,14 @@ public class PostOfficeDemo {
 //            totalPrice += parcel.parcelPrice();
 //        }
 //        System.out.println("Total price of 100 parcels is " + totalPrice + " PLN");
+
+        System.out.println();
+        System.out.println("=====Send package=====");
+        Post post1 = new Post(parcel1);
+        post1.sendPackage(parcel1);
+
+        System.out.println();
+        System.out.println("=====Create and return=====");
+        post1.createAndReturn();
     }
 }
