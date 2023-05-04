@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Bookshelf {
-    private static final String FILE_PATH = "org.example.advanced.exceptions.books.txt";
+    private static final String FILE_PATH = "src/main/java/org/example/advanced/exceptions/books/books.txt";
     private List<String> books = new ArrayList<>();
 
     public void loadBooks() throws FileNotFoundException {
