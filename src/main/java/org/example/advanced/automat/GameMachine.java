@@ -34,7 +34,7 @@ public class GameMachine {
         if (change > 0) {
             System.out.println("Your change is " + change + " ZŁ.");
         }
-        System.out.println("YOU BOUGHT " + game.getName());
+        System.out.println("You bought game " + game.getName());
         }
 
 }

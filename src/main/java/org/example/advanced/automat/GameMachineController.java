@@ -17,7 +17,7 @@ public class GameMachineController {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the name of the game");
         String name = scanner.nextLine();
-        System.out.print("Insert cash");
+        System.out.println("Insert cash");
         int amount = scanner.nextInt();
         try {
             gameMachine.buyGame(name, amount);
