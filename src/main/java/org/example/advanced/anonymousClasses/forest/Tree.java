@@ -1,4 +1,4 @@
-package org.example.advanced.forest;
+package org.example.advanced.anonymousClasses.forest;
 
 public class Tree {
 
