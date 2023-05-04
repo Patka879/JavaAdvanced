@@ -1,5 +1,7 @@
 package org.example.advanced.multithreading.task;
 
+import org.example.advanced.multithreading.task.Task;
+
 /**
  * Create a new thread in main in two different ways. By declaring a Task class that implements the
  * Runnable interface and using an anonymous class that implements Runnable. Both threads are supposed

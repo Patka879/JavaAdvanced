@@ -1,8 +1,5 @@
 package org.example.advanced.workshop;
 
-import org.example.advanced.house.Window;
-
-import java.util.Arrays;
 import java.util.Random;
 
 public class Car {
