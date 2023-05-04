@@ -18,9 +18,9 @@ public class GameMachineController {
         System.out.println("Enter the name of the game");
         String name = scanner.nextLine();
         System.out.println("Insert cash");
-        int amount = scanner.nextInt();
+        int price = scanner.nextInt();
         try {
-            gameMachine.buyGame(name, amount);
+            gameMachine.buyGame(name, price);
         } catch (GameNotAvailableException e) {
             System.out.println(e.getMessage());
         } catch (InsuficientFundsException e) {
