@@ -1,5 +1,6 @@
 package org.example.advanced.streams.functionalInterfaces.task35;
 
+import java.util.Comparator;
 import java.util.Random;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
@@ -25,7 +26,17 @@ public class generator {
         System.out.println(isPasswordLongEnough.test("Pass"));
 
         // Comparing two strings along the length (difficult).
+        Comparator<String> compareLength = (str1, str2)-> {
+            int result;
+            if (str1.length() >= str2.length()) {
+                result = str1.length();
+            } else  {
+                result = str2.length();
+            }
+            return result;
+        };
 
+        System.out.println(compareLength.compare("Lambda", "Expression"));
     }
 
 }
