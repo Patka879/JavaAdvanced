@@ -58,7 +58,7 @@ public class functionalInterfacesDemo {
         // Predicate
 
         // Runnable
-        // Comperator
+        // Comparator
         // ActionListener
     }
 }
