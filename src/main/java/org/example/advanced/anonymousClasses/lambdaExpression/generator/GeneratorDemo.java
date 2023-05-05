@@ -6,7 +6,7 @@ public class GeneratorDemo {
     public static void main(String[] args) {
         Generator randomNumber = () -> {
             Random random = new Random();
-            return random.nextInt(0,11);
+            return random.nextInt(1,11);
         };
 
         System.out.println(randomNumber.generator());
