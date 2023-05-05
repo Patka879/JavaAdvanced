@@ -26,13 +26,14 @@ public interface StreamService {
     // metody klasy Person, będą potrzebne później
 
     // Dla każdego imienia z listy tworzy tworzy osobę i zwraca listę tych osób, wykorzystaj własną impl klasy Person
-    List<Person> buildPeopleWithNames(List<String> names);
+    List<MyPerson> buildPeopleWithNames(List<String> names);
+
 
     //zwraca osoby o ID powyżej zadanej wartości
-    List<Person> findPeopleOfIdGreaterThan(List<Person> people,int id);
+    List<MyPerson> findPeopleOfIdGreaterThan(List<MyPerson> people, int id);
 
     //sprawdza czy wśród tych osób jest powyżej 60 roku życia
-    boolean hasSenior(List<Person> people);
+    boolean hasSenior(List<MyPerson> people);
 
 
     //sumuje łączną gotówkę wszystkich osób

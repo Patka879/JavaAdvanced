@@ -44,18 +44,23 @@ public class MyStreamService implements StreamService{
     }
 
     @Override
-    public List<Person> buildPeopleWithNames(List<String> names) {
-        return null;
+    public List<MyPerson> buildPeopleWithNames(List<String> names) {
+        return names.stream()
+                .map(name -> new MyPerson(name))
+                .toList();
     }
 
     @Override
-    public List<Person> findPeopleOfIdGreaterThan(List<Person> people, int id) {
-        return null;
+    public List<MyPerson> findPeopleOfIdGreaterThan(List<MyPerson> people, int id) {
+        return people.stream()
+                .filter(person -> person.getId() > id)
+                .toList();
     }
 
     @Override
-    public boolean hasSenior(List<Person> people) {
-        return false;
+    public boolean hasSenior(List<MyPerson> people) {
+        return people.stream()
+                .anyMatch(person -> person.getAge() > 60);
     }
 
     @Override

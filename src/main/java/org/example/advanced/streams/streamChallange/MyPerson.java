@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import java.util.Random;
 
 public class MyPerson extends Person {
-    Random random = new Random();
 
     public MyPerson(String name) {
         super(name);
@@ -12,6 +11,7 @@ public class MyPerson extends Person {
 
     @Override
     protected int getRandomCash() {
+        Random random = new Random();
         int randomInt = random.nextInt(1, 101);
         return randomInt;
     }
@@ -26,6 +26,17 @@ public class MyPerson extends Person {
 
     @Override
     public int getAge() {
-        return 0;
+        LocalDate birthDate = getRandomBirthDate();
+        LocalDate currentDate = LocalDate.now();
+        int age = currentDate.getYear() - birthDate.getYear();
+        int currentMonth = currentDate.getMonthValue();
+        int birthMonth = birthDate.getMonthValue();
+
+        if (birthMonth > currentMonth ||
+                (birthMonth == currentMonth && birthDate.getDayOfMonth() > currentDate.getDayOfMonth())) {
+            age--;
+        }
+
+        return age;
     }
 }
