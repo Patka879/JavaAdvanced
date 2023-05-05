@@ -31,12 +31,16 @@ public class MyStreamService implements StreamService{
 
     @Override
     public void printNumbersOfRange(int[] numbers, int minValue, int maxValue) {
-
+        Arrays.stream(numbers)
+                .filter(number -> number >= minValue && number <= maxValue)
+                .forEach(System.out::println);
     }
 
     @Override
     public List<Integer> computeNamesLength(List<String> names) {
-        return null;
+        return names.stream()
+                .map(name -> name.length())
+                .toList();
     }
 
     @Override

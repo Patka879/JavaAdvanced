@@ -16,10 +16,11 @@ public class PersonDemo {
         streamService.sortAndPrint(names);
         System.out.println(streamService.distinctAndCountNumbers(primeNumbers));
         System.out.println(streamService.computeMaleNames(names));
+        streamService.printNumbersOfRange(primeNumbers, 70, 100);
+        System.out.println(streamService.computeNamesLength(names));
 
 
-
-        //List<Person> people = streamService.buildPeopleWithNames(names);
+        List<Person> people = streamService.buildPeopleWithNames(names);
         //od tego momentu wykorzystuj również zbiór people do testu metod wykorzystujących argument List<Person>
 
     }
