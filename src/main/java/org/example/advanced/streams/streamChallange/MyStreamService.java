@@ -14,15 +14,19 @@ public class MyStreamService implements StreamService{
 
     @Override
     public int distinctAndCountNumbers(int[] numbers) {
-        // arrays dont have method streams but we can use
+        // arrays don't have method streams, but we can use this:
 
-        Arrays.stream(numbers);
-        return 0;
+        return Arrays.stream(numbers)
+                .distinct()
+                .sum();
+
     }
 
     @Override
     public List<String> computeMaleNames(List<String> names) {
-        return null;
+        return names.stream()
+                .filter(name -> name.endsWith("a"))
+                .toList();
     }
 
     @Override
