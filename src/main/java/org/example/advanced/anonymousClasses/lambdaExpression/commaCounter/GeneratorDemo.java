@@ -1,4 +1,4 @@
-package org.example.advanced.anonymousClasses.lambdaExpression.comaCounter;
+package org.example.advanced.anonymousClasses.lambdaExpression.commaCounter;
 
 /**
  * Create TextConverter interface with proper abstract method and use it to create lambda expressions
