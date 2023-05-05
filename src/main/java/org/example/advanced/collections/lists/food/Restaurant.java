@@ -1,4 +1,4 @@
-package org.example.advanced.collections.food;
+package org.example.advanced.collections.lists.food;
 
 import java.util.ArrayList;
 import java.util.Scanner;

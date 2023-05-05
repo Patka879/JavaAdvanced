@@ -1,4 +1,4 @@
-package org.example.advanced.collections.arrayList;
+package org.example.advanced.collections.lists.arrayList;
 
 import java.sql.SQLOutput;
 import java.util.ArrayList;

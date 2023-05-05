@@ -1,4 +1,4 @@
-package org.example.advanced.collections.food;
+package org.example.advanced.collections.lists.food;
 /**
  * 22. Execute the following commands:
  * Create a collection of food names and complete with 5 dishes.

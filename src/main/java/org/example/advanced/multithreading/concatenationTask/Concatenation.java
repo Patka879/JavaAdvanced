@@ -3,12 +3,14 @@ package org.example.advanced.multithreading.concatenationTask;
 public class Concatenation implements Runnable {
     private final int repetition;
     private final char input;
-    private String result;
+    private String result = "";
     private boolean aborted;
+    private Thread thread;
 
     public Concatenation(int repetition, char input) {
         this.repetition = repetition;
         this.input = input;
+        thread = new Thread(this);
     }
 
     public void abort() {
@@ -20,20 +22,24 @@ public class Concatenation implements Runnable {
     }
 
     public void startTask() {
-        Thread thread = new Thread(this);
         thread.start();
+    }
+
+    public void joinThread() {
+        try {
+            thread.join();
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
     @Override
     public void run() {
-        String concatenated = "";
         for (int i = 0; i < repetition; i++) {
             if (aborted) {
-                result = null;
                 return;
             }
-            concatenated += input;
+            result += input;
         }
-        result = concatenated;
     }
 
 }

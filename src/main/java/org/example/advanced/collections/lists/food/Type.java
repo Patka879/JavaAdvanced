@@ -1,4 +1,4 @@
-package org.example.advanced.collections.food;
+package org.example.advanced.collections.lists.food;
 
 public enum Type {
     BREAKFAST ("breakfast"),
