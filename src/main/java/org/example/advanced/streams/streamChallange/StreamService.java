@@ -37,12 +37,12 @@ public interface StreamService {
 
 
     //sumuje łączną gotówkę wszystkich osób
-    double sumTotalCash(List<Person> people);
+    double sumTotalCash(List<MyPerson> people);
 
     //sortuje listę według ilości pieniędzy i zwraca najbogatszą osobę, jeśli nie znajdzie nikogo może zwrócić null
-    Person findRichestPerson(List<Person> people);
+    Person findRichestPerson(List<MyPerson> people);
 
     //wyciąga średni wiek osób w latach jeśli nie ma żadnej osoby może zwrócić -1
-    double computeAverageAge(List<Person> people);
+    double computeAverageAge(List<MyPerson> people);
 
 }

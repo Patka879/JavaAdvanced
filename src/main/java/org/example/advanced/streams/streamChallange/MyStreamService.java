@@ -1,7 +1,9 @@
 package org.example.advanced.streams.streamChallange;
 
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 public class MyStreamService implements StreamService{
 
@@ -64,17 +66,38 @@ public class MyStreamService implements StreamService{
     }
 
     @Override
-    public double sumTotalCash(List<Person> people) {
-        return 0;
+    public double sumTotalCash(List<MyPerson> people) {
+        return people.stream()
+                .mapToDouble(person -> person.getCash())
+                .sum();
     }
 
     @Override
-    public Person findRichestPerson(List<Person> people) {
+    public MyPerson findRichestPerson(List<MyPerson> people) {
+        Optional<MyPerson> richestPerson = people.stream()
+                                                .sorted(Comparator.comparingDouble(Person::getCash).reversed())
+                                                .findFirst();
+
+        if (richestPerson.isPresent()) {
+            System.out.println("The richest person is " + richestPerson.get().getName() + " with "
+             + richestPerson.get().getCash() + " in the bank.");
+        }
+
         return null;
     }
 
     @Override
-    public double computeAverageAge(List<Person> people) {
-        return 0;
+    public double computeAverageAge(List<MyPerson> people) {
+        double averageAge = people.stream()
+                                .mapToInt(person -> person.getAge())
+                                .average()
+                                .orElse(Double.NaN);
+
+
+        if (!people.isEmpty()) {
+            System.out.println("Average age in this group of people is " + averageAge);
+        }
+
+        return -1;
     }
 }

@@ -24,7 +24,9 @@ public class PersonDemo {
         System.out.println(people);
         System.out.println(streamService.findPeopleOfIdGreaterThan(people, 2));
         System.out.println(streamService.hasSenior(people));
-        //od tego momentu wykorzystuj również zbiór people do testu metod wykorzystujących argument List<Person>
+        System.out.println(streamService.sumTotalCash(people));
+        streamService.findRichestPerson(people);
+        streamService.computeAverageAge(people);
 
     }
 

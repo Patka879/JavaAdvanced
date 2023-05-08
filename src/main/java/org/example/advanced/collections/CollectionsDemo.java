@@ -32,7 +32,7 @@ public class CollectionsDemo {
             System.out.println(name);
         }
 
-        // Objects are stored in different places in memory so its not a duplicate
+        // Objects are stored in different places in memory, so it is not a duplicate
         // it just checks "==" the only way to check values is to override equals with different method
         Set<Product> products = new HashSet<>();
 
