@@ -27,6 +27,22 @@ public class AdvancedStreams {
                                         .toList();
         System.out.println(everyPetName);
 
+        double average = owners.stream()
+                .flatMap(owner -> owner.getPets().stream())
+                .mapToInt(pet -> pet.getAge())
+                .average()
+                .orElse(0);
+
+
+        System.out.println(average);
+
+        List<Integer> numbers =  owners.stream()
+                .flatMap(owner -> owner.getPets().stream())
+                .mapToInt(pet -> pet.getAge())
+                .boxed() // moves you from IntStream (that has different methods) to normal Stream
+                .toList();
+        System.out.println(numbers);
+
     }
 }
 
